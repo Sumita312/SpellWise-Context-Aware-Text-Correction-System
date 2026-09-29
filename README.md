@@ -22,46 +22,19 @@ The system detects both traditional spelling mistakes and **real-word errors**, 
 
 ## 🔧 How It Works
 
-SpellWise uses a two-stage correction pipeline:
+SpellWise uses a two-stage correction pipeline.
 
-```text
-                 User Input
-                     |
-                     v
-           Text / Document Upload
-                     |
-                     v
-              Text Extraction
-                     |
-                     v
-             SymSpell Correction
-                     |
-                     v
-            Candidate Generation
-                     |
-                     v
-             Gemini LLM Analysis
-                     |
-                     v
-             Contextual Correction
-                     |
-                     v
-               Final Output
-                     |
-                     v
-            Corrections Display
-                     |
-                     v
-             Download Corrected File
+### 1. SymSpell Correction
 
-1. SymSpell Correction
 The first stage uses SymSpell for fast spelling correction.
 
 SymSpell uses a frequency dictionary and edit-distance-based candidate generation to identify possible spelling errors efficiently.
 
-Example
-Input:
+**Example:**
 
+**Input:**
+
+```text
 I lik to buy a pear of shoes.
 
 SymSpell Output:
@@ -71,13 +44,14 @@ I like to buy a pear of shoes.
 Correction:
 
 lik → like
-
 2. Gemini Context-Aware Correction
+
 After SymSpell correction, the resulting text is passed to the Google Gemini LLM.
 
 Gemini analyzes the complete sentence and identifies errors that require contextual understanding.
 
-Example
+Example:
+
 SymSpell Output:
 
 I like to buy a pear of shoes.
@@ -95,15 +69,12 @@ The word pear is correctly spelled, but it is incorrect in the context of buying
 📝 Complete Example
 Input
 I lik to buy a pear of shoes.
-
 Correction Process
 Wrong Word	Corrected Word	Fixed By
 lik	like	SymSpell
 pear	pair	Gemini
-
 Final Output
 I like to buy a pair of shoes.
-
 📁 Project Structure
 SpellWise-Context-Aware-Text-Correction-System/
 │
@@ -119,19 +90,14 @@ SpellWise-Context-Aware-Text-Correction-System/
 │
 ├── .env.example
 └── .gitignore
-
-
-
 📄 Document Correction
-SpellWise supports document-based text correction.
+
+SpellWise also supports document-based text correction.
 
 Supported Formats
 PDF
-
 DOC
-
 DOCX
-
 Document Workflow
 Upload Document
       |
@@ -150,7 +116,10 @@ Generate Corrected Document
       v
 Download Corrected File
 
+Users can upload a supported document, allow SpellWise to process and correct the text, and then download the corrected document.
+
 📊 Correction Results
+
 SpellWise displays the corrections made during the processing pipeline.
 
 Example:
@@ -163,18 +132,11 @@ This makes the correction process transparent and allows users to understand how
 
 🛠️ Technology Stack
 Python
-
 Streamlit
-
 SymSpell
-
 Google Gemini
-
 Google GenAI SDK
-
 PDF/DOC/DOCX processing libraries
-
-
 🏗️ System Architecture
                     +------------------+
                     |    User Input    |
@@ -218,8 +180,8 @@ PDF/DOC/DOCX processing libraries
                     |  Streamlit UI    |
                     | + Corrections    |
                     +------------------+
-
 💡 Why a Hybrid Approach?
+
 Traditional spelling correction systems are fast and efficient, but they mainly depend on dictionaries, word frequencies, and edit distance.
 
 They may fail to identify real-word errors.
@@ -253,71 +215,47 @@ This combines the speed of traditional spelling correction with the contextual c
 
 ✅ Advantages
 Fast initial spelling correction
-
 Context-aware error detection
-
 Detection of real-word errors
-
 Combination of traditional NLP and LLM technology
-
 Text and document correction
-
 PDF, DOC, and DOCX support
-
 Transparent correction results
-
 Corrected document download
-
 Simple Streamlit interface
-
 Modular project architecture
 
 🚀 Future Enhancements
 Grammar correction
-
 Sentence restructuring
-
 Multi-language support
-
 Correction confidence scores
-
 Custom vocabulary support
-
 Advanced grammar and style correction
-
 Real-time text correction
-
 Browser extension
-
 Text editor integration
-
 Additional document formats
-
 Improved document formatting preservation
 
 🎯 Project Highlights
 Developed a hybrid spelling correction system using SymSpell with a frequency dictionary and edit-distance-based candidate generation for fast error detection.
-
 Integrated Google Gemini as a context-aware correction layer to select or improve candidate corrections based on sentence context.
-
 Implemented detection of real-word errors that traditional dictionary-based spell checkers may miss.
-
 Built an interactive Streamlit web application that displays the original text, intermediate SymSpell output, final corrected text, and corrections made.
-
 Added support for PDF, DOC, and DOCX document correction.
-
+Enabled users to download corrected documents after processing.
 Designed a modular architecture separating spelling correction, LLM correction, document processing, and the user interface.
-
 📌 Conclusion
+
 SpellWise demonstrates a hybrid approach to text correction by combining the efficiency of SymSpell with the contextual capabilities of Google Gemini.
 
 The system handles both conventional spelling mistakes and context-dependent word errors while providing users with a transparent view of the corrections performed.
 
 With support for text and document processing through an interactive Streamlit interface, SpellWise provides a foundation for future grammar, writing, and language-correction features.
 
+👨‍💻 Project
 
-
-Project: SpellWise - Context-Aware Text Correction System
-
+SpellWise - Context-Aware Text Correction System
 
 
