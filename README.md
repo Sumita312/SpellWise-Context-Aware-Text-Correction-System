@@ -180,8 +180,9 @@ PDF/DOC/DOCX processing libraries
                     |  Streamlit UI    |
                     | + Corrections    |
                     +------------------+
-💡 Why a Hybrid Approach?
+```
 
+## 💡 Why a Hybrid Approach?                                                                                                                                        
 Traditional spelling correction systems are fast and efficient, but they mainly depend on dictionaries, word frequencies, and edit distance.
 
 They may fail to identify real-word errors.
@@ -190,16 +191,17 @@ For example:
 
 I want to buy a pear of shoes.
 
-Both pear and pair are valid dictionary words.
+Both `pear` and `pair` are valid dictionary words.
 
 A traditional spelling checker may therefore not identify the error.
 
 The Gemini LLM analyzes the sentence context and can identify:
 
-pear → pair
+`pear → pair`
 
 SpellWise combines both approaches:
 
+```text
 SymSpell
    |
    v
@@ -210,52 +212,59 @@ Gemini
    |
    v
 Context-Aware Correction
+```
 
 This combines the speed of traditional spelling correction with the contextual capabilities of an LLM.
 
-✅ Advantages
-Fast initial spelling correction
-Context-aware error detection
-Detection of real-word errors
-Combination of traditional NLP and LLM technology
-Text and document correction
-PDF, DOC, and DOCX support
-Transparent correction results
-Corrected document download
-Simple Streamlit interface
-Modular project architecture
 
-🚀 Future Enhancements
-Grammar correction
-Sentence restructuring
-Multi-language support
-Correction confidence scores
-Custom vocabulary support
-Advanced grammar and style correction
-Real-time text correction
-Browser extension
-Text editor integration
-Additional document formats
-Improved document formatting preservation
+## 💡 Advantages
 
-🎯 Project Highlights
-Developed a hybrid spelling correction system using SymSpell with a frequency dictionary and edit-distance-based candidate generation for fast error detection.
-Integrated Google Gemini as a context-aware correction layer to select or improve candidate corrections based on sentence context.
-Implemented detection of real-word errors that traditional dictionary-based spell checkers may miss.
-Built an interactive Streamlit web application that displays the original text, intermediate SymSpell output, final corrected text, and corrections made.
-Added support for PDF, DOC, and DOCX document correction.
-Enabled users to download corrected documents after processing.
-Designed a modular architecture separating spelling correction, LLM correction, document processing, and the user interface.
-📌 Conclusion
+- Fast initial spelling correction
+- Context-aware error detection
+- Detection of real-word errors
+- Combination of traditional NLP and LLM technology
+- Text and document correction
+- PDF, DOC, and DOCX support
+- Transparent correction results
+- Corrected document download
+- Simple Streamlit interface
+- Modular project architecture
 
-SpellWise demonstrates a hybrid approach to text correction by combining the efficiency of SymSpell with the contextual capabilities of Google Gemini.
+---
 
-The system handles both conventional spelling mistakes and context-dependent word errors while providing users with a transparent view of the corrections performed.
+## 🚀 Future Enhancements
 
-With support for text and document processing through an interactive Streamlit interface, SpellWise provides a foundation for future grammar, writing, and language-correction features.
+- Grammar correction
+- Sentence restructuring
+- Multi-language support
+- Correction confidence scores
+- Custom vocabulary support
+- Advanced grammar and style correction
+- Real-time text correction
+- Browser extension
+- Text editor integration
+- Additional document formats
+- Improved document formatting preservation
+  ```
 
-👨‍💻 Project
+## 🎯 Project Highlights
 
-SpellWise - Context-Aware Text Correction System
+- Developed a hybrid spelling correction system using  **SymSpell** with a frequency dictionary and edit-distance-based candidate generation for fast error detection.
+- Integrated **Google Gemini** as a context-aware correction layer to identify and correct real-word errors.
+- Built an interactive **Streamlit** application for text and document correction.
+- Added support for **PDF, DOC, and DOCX** files.
+- Enabled users to download corrected documents.
+- Provided transparent correction results showing which system corrected each error.
 
+---
+
+## 📌 Conclusion
+
+SpellWise combines the speed of traditional spelling correction with the contextual capabilities of an LLM, allowing it to handle both spelling mistakes and context-dependent word errors.
+
+---
+
+## 👨‍💻 Project
+
+**SpellWise - Context-Aware Text Correction System**
 
